@@ -9,13 +9,14 @@
 
 # 😎 Read me
 
-Node.js + Typescrypt + Express.js + MongoDB + GraphQL Real Estate API as a proof of concept.
+Node.js + Typescrypt + Express.js + MongoDB Real Estate REST-API as a proof of concept.
 
 ### 🌟 Extra features
 
+- **[GraphQL](https://swagger.io/)** - A fun Query language for APIs.
 - **[Docker](https://docs.docker.com/get-started/overview/)** - To easily run the project with just one command line.
-- **[Jest](https://jestjs.io/)** - To keep the project bug-free
-- **[Swagger](https://swagger.io/)** - To easily test the API with a awesome UI
+- **[Jest](https://jestjs.io/)** - To keep the project bug-free.
+- **[Swagger](https://swagger.io/)** - To easily test the API with a awesome UI.
 
 ### 🎯 Prerequisites
 
