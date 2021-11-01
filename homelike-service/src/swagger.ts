@@ -2,11 +2,11 @@ export default {
   "openapi": "3.0.0",
   "servers": [
     {
-      "url": "http://localhost:30021/api",
+      "url": "http://localhost:3021/api",
       "description": "Docker"
     },
     {
-      "url": "http://localhost:30020/api",
+      "url": "http://localhost:3020/api",
       "description": "Local"
     }
   ],
