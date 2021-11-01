@@ -10,7 +10,7 @@ Node.js + Typescrypt + MongoDB Real Estate API as a proof of concept.
 
 > This application runs on a docker compose with his own mongodb database
 
-Just run:
+Just run at root of the project:
 
 `docker-compose up -d`
 
