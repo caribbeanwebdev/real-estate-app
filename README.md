@@ -1,6 +1,6 @@
 # 😎 Read me
 
-Welcome! Here you will find useful information to debug, test, run, and deploy your serverless app using this template.
+Node.js + Typescrypt + MongoDB Real Estate API as a proof of concept.
 
 ### 🎯 Prerequisites
 
@@ -16,6 +16,4 @@ Just run:
 
 The API will run on http://localhost:3021/api
 
-Plus, you can go to 'homelike-service' folder and create a`.env` based on '.env.example' to run  the project locally with `npm run dev` 
-
-###  
+Plus, you can go to 'homelike-service' folder and create a `.env` based on `.env.example` to run  the project locally with `npm run dev`
