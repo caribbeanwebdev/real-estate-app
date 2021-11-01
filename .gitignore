@@ -128,3 +128,5 @@ src/build/**/*.js.map
 src/build/*
 *.js
 *.map
+*.js
+*.map
