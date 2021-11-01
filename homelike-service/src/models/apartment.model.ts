@@ -17,7 +17,7 @@ export interface IApartment {
 
 export default interface IApartmentModel extends Document, IApartment {}
 
-const schema = new Schema(
+const ApartmentSchema = new Schema(
   {
     name: {
       type: String,
@@ -75,7 +75,7 @@ const schema = new Schema(
     timestamps: true,
   }
 );
-schema.index({ location: "2dsphere" });
-const Apartment = model<IApartmentModel>("Apartment", schema);
+ApartmentSchema.index({ location: "2dsphere" });
+const Apartment = model<IApartmentModel>("Apartment", ApartmentSchema);
 
-export { Apartment };
+export { Apartment,ApartmentSchema };

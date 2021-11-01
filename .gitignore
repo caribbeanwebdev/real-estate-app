@@ -133,3 +133,4 @@ src/build/*
 homelike-service/.env
 homelike-service/globalConfig.json
 homelike-service/babel.config.ts
+homelike-service/package-lock.json
