@@ -8,7 +8,6 @@ const mongo_url = `mongodb://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/`;
 
 (async () => {
   try {
-    console.log(mongo_url);
     mongoose
       .connect(mongo_url, {
         useCreateIndex: true,

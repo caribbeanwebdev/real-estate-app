@@ -18,7 +18,7 @@ const controller = {
       });
       user.setPassword(password);
       await user.save();
-      res.json(user.authJSON());
+      res.json({success:true,...user.authJSON()});
     } catch (error) {
       return res
         .status(httpStatus.INTERNAL_SERVER_ERROR)
@@ -34,7 +34,7 @@ const controller = {
           message: "Invalid email and password combination",
         });
       } else {
-        res.json(user.authJSON());
+        res.json({success:true,...user.authJSON()});
       }
     } catch (error) {
       return res

@@ -20,7 +20,6 @@ const controller = {
         if(user.favorites.includes(favoriteId)){
           return res.status(httpStatus.BAD_REQUEST).json({
             success: false,
-            message: "Apartment already marked as favorite"
           });
         }
         user.favorites.push(apartment._id);

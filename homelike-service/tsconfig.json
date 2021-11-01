@@ -13,6 +13,6 @@
     "module": "commonjs",
     "skipLibCheck": true
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "jest.config.js"],
   "exclude": ["build", "node_modules"]
 }

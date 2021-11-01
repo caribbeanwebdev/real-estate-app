@@ -131,3 +131,5 @@ src/build/*
 *.js
 *.map
 homelike-service/.env
+homelike-service/globalConfig.json
+homelike-service/babel.config.ts
