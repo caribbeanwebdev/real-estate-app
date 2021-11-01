@@ -16,7 +16,7 @@ Node.js + Typescrypt + Express.js + MongoDB Real Estate REST-API as a proof of c
 - **[GraphQL](https://graphql.org/)** - A fun query language for APIs.
 - **[Docker](https://docs.docker.com/get-started/overview/)** - To easily run the project with just one command line.
 - **[Jest](https://jestjs.io/)** - To keep the project bug-free.
-- **[Swagger](https://swagger.io/)** - To easily test the API with a awesome UI.
+- **[Swagger](https://swagger.io/)** - To easily test the API with an awesome UI.
 
 ### 🎯 Prerequisites
 
