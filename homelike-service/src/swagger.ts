@@ -1,684 +1,661 @@
 export default {
-  "openapi": "3.0.0",
-  "servers": [
+  openapi: "3.0.0",
+  servers: [
     {
-      "url": "http://localhost:3021/api",
-      "description": "Docker"
+      url: "http://localhost:3021/api",
+      description: "Docker",
     },
     {
-      "url": "http://localhost:3020/api",
-      "description": "Local"
-    }
+      url: "http://localhost:3020/api",
+      description: "Local",
+    },
   ],
-  "info": {
-    "version": "v1.0",
-    "title": "homelike-app",
-    "description": "Node.js + Typescrypt + MongoDB Real Estate API as a proof of concept."
+  info: {
+    version: "v1.0",
+    title: "homelike-app",
+    description:
+      "Node.js + Typescrypt + MongoDB Real Estate API as a proof of concept.",
   },
-  "paths": {
+  paths: {
     "/users/register": {
-      "post": {
-        "summary": "register",
-        "description": "Register a user",
-        "operationId": "register",
-        "responses": {
+      post: {
+        summary: "register",
+        description: "Register a user",
+        operationId: "register",
+        responses: {
           "200": {
-            "description": "OK",
-            "content": {
+            description: "OK",
+            content: {
               "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: {
+                      type: "boolean",
                     },
-                    "name": {
-                      "type": "string"
+                    name: {
+                      type: "string",
                     },
-                    "first_name": {
-                      "type": "string"
+                    first_name: {
+                      type: "string",
                     },
-                    "last_name": {
-                      "type": "string"
+                    last_name: {
+                      type: "string",
                     },
-                    "email": {
-                      "type": "string"
+                    email: {
+                      type: "string",
                     },
-                    "token": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "first_name": {
-                    "type": "string"
+                    token: {
+                      type: "string",
+                    },
                   },
-                  "last_name": {
-                    "type": "string"
-                  },
-                  "email": {
-                    "type": "string"
-                  },
-                  "password": {
-                    "type": "string"
-                  }
                 },
-                "example": {
-                  "first_name": "Jean",
-                  "last_name": "Calderon",
-                  "email": "jancaldron@gmail.com",
-                  "password": "123456"
-                }
-              }
-            }
-          }
+              },
+            },
+          },
         },
-        "tags": [
-          "User"
-        ]
-      }
+        requestBody: {
+          required: true,
+          content: {
+            "application/json": {
+              schema: {
+                type: "object",
+                properties: {
+                  first_name: {
+                    type: "string",
+                  },
+                  last_name: {
+                    type: "string",
+                  },
+                  email: {
+                    type: "string",
+                  },
+                  password: {
+                    type: "string",
+                  },
+                },
+                example: {
+                  first_name: "Jean",
+                  last_name: "Calderon",
+                  email: "jancaldron@gmail.com",
+                  password: "123456",
+                },
+              },
+            },
+          },
+        },
+        tags: ["User"],
+      },
     },
     "/users/authenticate": {
-      "post": {
-        "summary": "authenticate",
-        "description": "Login a user",
-        "operationId": "authenticate",
-        "responses": {
+      post: {
+        summary: "authenticate",
+        description: "Login a user",
+        operationId: "authenticate",
+        responses: {
           "200": {
-            "description": "OK",
-            "content": {
+            description: "OK",
+            content: {
               "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: {
+                      type: "boolean",
                     },
-                    "name": {
-                      "type": "string"
+                    name: {
+                      type: "string",
                     },
-                    "first_name": {
-                      "type": "string"
+                    first_name: {
+                      type: "string",
                     },
-                    "last_name": {
-                      "type": "string"
+                    last_name: {
+                      type: "string",
                     },
-                    "email": {
-                      "type": "string"
+                    email: {
+                      type: "string",
                     },
-                    "token": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "email": {
-                    "type": "string"
+                    token: {
+                      type: "string",
+                    },
                   },
-                  "password": {
-                    "type": "string"
-                  }
                 },
-                "example": {
-                  "email": "jancaldron@gmail.com",
-                  "password": "123456"
-                }
-              }
-            }
-          }
+              },
+            },
+          },
         },
-        "tags": [
-          "User"
-        ]
-      }
+        requestBody: {
+          required: true,
+          content: {
+            "application/json": {
+              schema: {
+                type: "object",
+                properties: {
+                  email: {
+                    type: "string",
+                  },
+                  password: {
+                    type: "string",
+                  },
+                },
+                example: {
+                  email: "jancaldron@gmail.com",
+                  password: "123456",
+                },
+              },
+            },
+          },
+        },
+        tags: ["User"],
+      },
     },
     "/apartments": {
-      "post": {
-        "summary": "create",
-        "description": "Create an apartment",
-        "operationId": "create",
-        "responses": {
+      post: {
+        summary: "create",
+        description: "Create an apartment",
+        operationId: "create",
+        responses: {
           "200": {
-            "description": "ok",
-            "content": {
+            description: "ok",
+            content: {
               "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: {
+                      type: "boolean",
                     },
-                    "apartment": {
-                      "$ref": "#/components/schemas/apartment"
-                    }
-                  }
-                }
-              }
-            }
+                    apartment: {
+                      $ref: "#/components/schemas/apartment",
+                    },
+                  },
+                },
+              },
+            },
           },
           "401": {
-            "description": "Not authenticated"
-          }
+            description: "Not authenticated",
+          },
         },
-        "requestBody": {
-          "required": true,
-          "content": {
+        requestBody: {
+          required: true,
+          content: {
             "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "name": {
-                    "type": "string"
+              schema: {
+                type: "object",
+                properties: {
+                  name: {
+                    type: "string",
                   },
-                  "description": {
-                    "type": "string"
+                  description: {
+                    type: "string",
                   },
-                  "price": {
-                    "type": "number"
+                  price: {
+                    type: "number",
                   },
-                  "address": {
-                    "type": "string"
+                  address: {
+                    type: "string",
                   },
-                  "city": {
-                    "type": "string"
+                  city: {
+                    type: "string",
                   },
-                  "country": {
-                    "type": "string"
+                  country: {
+                    type: "string",
                   },
-                  "rooms": {
-                    "type": "number"
+                  rooms: {
+                    type: "number",
                   },
-                  "location": {
-                    "type": "object",
-                    "properties": {
-                      "coordinates": {
-                        "type": "array",
-                        "items": {
-                          "type": "number",
-                          "description": "[longitude,latitude]"
+                  location: {
+                    type: "object",
+                    properties: {
+                      coordinates: {
+                        type: "array",
+                        items: {
+                          type: "number",
+                          description: "[longitude,latitude]",
                         },
-                        "minItems": 2,
-                        "maxItems": 2
-                      }
-                    }
-                  }
-                },
-                "example": {
-                  "name": "test name",
-                  "description": "test description",
-                  "price": 1500,
-                  "address": "test address",
-                  "city": "Madrid",
-                  "country": "Spain",
-                  "rooms": 2,
-                  "location": {
-                    "coordinates": [
-                      -69.96230242857646,
-                      18.448300190649707
-                    ]
-                  }
-                }
-              }
-            }
-          }
-        },
-        "tags": [
-          "Apartment"
-        ]
-      },
-      "get": {
-        "summary": "search",
-        "description": "Search apartments with filters",
-        "operationId": "search",
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/city"
-          },
-          {
-            "$ref": "#/components/parameters/country"
-          },
-          {
-            "$ref": "#/components/parameters/rooms"
-          },
-          {
-            "$ref": "#/components/parameters/price"
-          },
-          {
-            "$ref": "#/components/parameters/nearest"
-          },
-          {
-            "$ref": "#/components/parameters/latitude"
-          },
-          {
-            "$ref": "#/components/parameters/longitude"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
+                        minItems: 2,
+                        maxItems: 2,
+                      },
                     },
-                    "apartments": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/apartment"
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
+                  },
+                },
+                example: {
+                  name: "test name",
+                  description: "test description",
+                  price: 1500,
+                  address: "test address",
+                  city: "Madrid",
+                  country: "Spain",
+                  rooms: 2,
+                  location: {
+                    coordinates: [-69.96230242857646, 18.448300190649707],
+                  },
+                },
+              },
+            },
+          },
         },
-        "tags": [
-          "Apartment"
-        ]
-      }
+        tags: ["Apartment"],
+      },
+      get: {
+        summary: "search",
+        description: "Search apartments with filters",
+        operationId: "search",
+        parameters: [
+          {
+            $ref: "#/components/parameters/city",
+          },
+          {
+            $ref: "#/components/parameters/country",
+          },
+          {
+            $ref: "#/components/parameters/rooms",
+          },
+          {
+            $ref: "#/components/parameters/price",
+          },
+          {
+            $ref: "#/components/parameters/nearest",
+          },
+          {
+            $ref: "#/components/parameters/longitude",
+          },
+          {
+            $ref: "#/components/parameters/latitude",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "OK",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: {
+                      type: "boolean",
+                    },
+                    apartments: {
+                      type: "array",
+                      items: {
+                        $ref: "#/components/schemas/apartment",
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+        tags: ["Apartment"],
+      },
     },
     "/apartments/{apartment_id}": {
-      "get": {
-        "summary": "search/id",
-        "description": "Find apartment by ID",
-        "operationId": "search/id",
-        "parameters": [
+      get: {
+        summary: "search/id",
+        description: "Find apartment by ID",
+        operationId: "search/id",
+        parameters: [
           {
-            "$ref": "#/components/parameters/apartment_id"
-          }
+            $ref: "#/components/parameters/apartment_id",
+          },
         ],
-        "responses": {
+        responses: {
           "200": {
-            "description": "ok",
-            "content": {
+            description: "ok",
+            content: {
               "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: {
+                      type: "boolean",
                     },
-                    "apartment": {
-                      "$ref": "#/components/schemas/apartment"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "tags": [
-          "Apartment"
-        ]
-      },
-      "put": {
-        "summary": "update/id",
-        "description": "Update an apartment",
-        "operationId": "update/id",
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/apartment_id"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "ok",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
+                    apartment: {
+                      $ref: "#/components/schemas/apartment",
                     },
-                    "apartment": {
-                      "$ref": "#/components/schemas/apartment"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "name": {
-                    "type": "string"
                   },
-                  "description": {
-                    "type": "string"
-                  },
-                  "price": {
-                    "type": "number"
-                  },
-                  "address": {
-                    "type": "string"
-                  },
-                  "city": {
-                    "type": "string"
-                  },
-                  "country": {
-                    "type": "string"
-                  },
-                  "rooms": {
-                    "type": "number"
-                  },
-                  "location": {
-                    "type": "object",
-                    "properties": {
-                      "coordinates": {
-                        "type": "array",
-                        "items": {
-                          "type": "number",
-                          "description": "[longitude,latitude]"
-                        },
-                        "minItems": 2,
-                        "maxItems": 2
-                      }
-                    }
-                  }
                 },
-                "example": {
-                  "name": "test name",
-                  "description": "test description",
-                  "price": 1500,
-                  "address": "test address",
-                  "city": "Madrid",
-                  "country": "Spain",
-                  "rooms": 2,
-                  "location": {
-                    "coordinates": [
-                      -69.96230242857646,
-                      18.448300190649707
-                    ]
-                  }
-                }
-              }
-            }
-          }
+              },
+            },
+          },
         },
-        "tags": [
-          "Apartment"
-        ]
+        tags: ["Apartment"],
       },
-      "delete": {
-        "summary": "deletech/id",
-        "description": "Delete an apartment",
-        "operationId": "deletech/id",
-        "parameters": [
+      put: {
+        summary: "update/id",
+        description: "Update an apartment",
+        operationId: "update/id",
+        parameters: [
           {
-            "$ref": "#/components/parameters/apartment_id"
-          }
+            $ref: "#/components/parameters/apartment_id",
+          },
         ],
-        "responses": {
+        responses: {
           "200": {
-            "description": "ok",
-            "content": {
+            description: "ok",
+            content: {
               "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    }
-                  }
-                }
-              }
-            }
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: {
+                      type: "boolean",
+                    },
+                    apartment: {
+                      $ref: "#/components/schemas/apartment",
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+        requestBody: {
+          required: true,
+          content: {
+            "application/json": {
+              schema: {
+                type: "object",
+                properties: {
+                  name: {
+                    type: "string",
+                  },
+                  description: {
+                    type: "string",
+                  },
+                  price: {
+                    type: "number",
+                  },
+                  address: {
+                    type: "string",
+                  },
+                  city: {
+                    type: "string",
+                  },
+                  country: {
+                    type: "string",
+                  },
+                  rooms: {
+                    type: "number",
+                  },
+                  location: {
+                    type: "object",
+                    properties: {
+                      coordinates: {
+                        type: "array",
+                        items: {
+                          type: "number",
+                          description: "[longitude,latitude]",
+                        },
+                        minItems: 2,
+                        maxItems: 2,
+                      },
+                    },
+                  },
+                },
+                example: {
+                  name: "test name",
+                  description: "test description",
+                  price: 1500,
+                  address: "test address",
+                  city: "Madrid",
+                  country: "Spain",
+                  rooms: 2,
+                  location: {
+                    coordinates: [-69.96230242857646, 18.448300190649707],
+                  },
+                },
+              },
+            },
+          },
+        },
+        tags: ["Apartment"],
+      },
+      delete: {
+        summary: "deletech/id",
+        description: "Delete an apartment",
+        operationId: "deletech/id",
+        parameters: [
+          {
+            $ref: "#/components/parameters/apartment_id",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "ok",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: {
+                      type: "boolean",
+                    },
+                  },
+                },
+              },
+            },
           },
           "401": {
-            "description": "Not authenticated"
-          }
+            description: "Not authenticated",
+          },
         },
-        "tags": [
-          "Apartment"
-        ]
-      }
+        tags: ["Apartment"],
+      },
     },
     "/favorites{apartment_id}": {
-      "post": {
-        "summary": "mark/id",
-        "operationId": "mark/id",
-        "parameters": [
+      post: {
+        summary: "mark/id",
+        operationId: "mark/id",
+        parameters: [
           {
-            "$ref": "#/components/parameters/apartment_id"
-          }
+            $ref: "#/components/parameters/apartment_id",
+          },
         ],
-        "responses": {
+        responses: {
           "200": {
-            "description": "ok",
-            "content": {
+            description: "ok",
+            content: {
               "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
-                    }
-                  }
-                }
-              }
-            }
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: {
+                      type: "boolean",
+                    },
+                  },
+                },
+              },
+            },
           },
           "401": {
-            "description": "Not authenticated"
-          }
+            description: "Not authenticated",
+          },
         },
-        "tags": [
-          "Favorite"
-        ]
-      }
+        tags: ["Favorite"],
+      },
     },
     "/favorites": {
-      "get": {
-        "summary": "list",
-        "operationId": "list",
-        "parameters": [],
-        "responses": {
+      get: {
+        summary: "list",
+        operationId: "list",
+        parameters: [],
+        responses: {
           "200": {
-            "description": "OK",
-            "content": {
+            description: "OK",
+            content: {
               "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "boolean"
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: {
+                      type: "boolean",
                     },
-                    "favorites": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/apartment"
-                      }
-                    }
-                  }
-                }
-              }
-            }
+                    favorites: {
+                      type: "array",
+                      items: {
+                        $ref: "#/components/schemas/apartment",
+                      },
+                    },
+                  },
+                },
+              },
+            },
           },
           "401": {
-            "description": "Not authenticated"
-          }
+            description: "Not authenticated",
+          },
         },
-        "tags": [
-          "Favorite"
-        ]
-      }
-    }
+        tags: ["Favorite"],
+      },
+    },
   },
-  "components": {
-    "schemas": {
-      "apartment": {
-        "type": "object",
-        "properties": {
-          "_id": {
-            "type": "string"
+  components: {
+    schemas: {
+      apartment: {
+        type: "object",
+        properties: {
+          _id: {
+            type: "string",
           },
-          "name": {
-            "type": "string"
+          name: {
+            type: "string",
           },
-          "description": {
-            "type": "string"
+          description: {
+            type: "string",
           },
-          "price": {
-            "type": "number"
+          price: {
+            type: "number",
           },
-          "address": {
-            "type": "string"
+          address: {
+            type: "string",
           },
-          "city": {
-            "type": "string"
+          city: {
+            type: "string",
           },
-          "country": {
-            "type": "string"
+          country: {
+            type: "string",
           },
-          "rooms": {
-            "type": "number"
+          rooms: {
+            type: "number",
           },
-          "createdBy": {
-            "type": "string"
+          createdBy: {
+            type: "string",
           },
-          "createdAt": {
-            "type": "string",
-            "format": "date"
+          createdAt: {
+            type: "string",
+            format: "date",
           },
-          "updatedAt": {
-            "type": "string",
-            "format": "date"
+          updatedAt: {
+            type: "string",
+            format: "date",
           },
-          "location": {
-            "type": "object",
-            "properties": {
-              "coordinates": {
-                "type": "array",
-                "items": {
-                  "type": "number",
-                  "description": "[longitude,latitude]"
+          location: {
+            type: "object",
+            properties: {
+              coordinates: {
+                type: "array",
+                items: {
+                  type: "number",
+                  description: "[longitude,latitude]",
                 },
-                "minItems": 2,
-                "maxItems": 2
-              }
-            }
-          }
-        }
-      }
+                minItems: 2,
+                maxItems: 2,
+              },
+            },
+          },
+        },
+      },
     },
-    "parameters": {
-      "city": {
-        "name": "city",
-        "in": "query",
-        "style": "form",
-        "schema": {
-          "type": "string",
-          "example": "Madrid"
+    parameters: {
+      city: {
+        name: "city",
+        in: "query",
+        style: "form",
+        schema: {
+          type: "string",
+          example: "Madrid",
         },
-        "description": "City where is located"
+        description: "City where is located",
       },
-      "country": {
-        "name": "country",
-        "in": "query",
-        "style": "form",
-        "schema": {
-          "type": "string",
-          "example": "Spain"
+      country: {
+        name: "country",
+        in: "query",
+        style: "form",
+        schema: {
+          type: "string",
+          example: "Spain",
         },
-        "description": "Country where is located"
+        description: "Country where is located",
       },
-      "rooms": {
-        "name": "rooms",
-        "in": "query",
-        "style": "form",
-        "schema": {
-          "type": "number"
+      rooms: {
+        name: "rooms",
+        in: "query",
+        style: "form",
+        schema: {
+          type: "number",
         },
-        "description": "The minimum number of rooms"
+        description: "The minimum number of rooms",
       },
-      "price": {
-        "name": "price",
-        "in": "query",
-        "style": "form",
-        "schema": {
-          "type": "number"
+      price: {
+        name: "price",
+        in: "query",
+        style: "form",
+        schema: {
+          type: "number",
         },
-        "description": "Rental price in euros"
+        description: "Rental price in euros",
       },
-      "nearest": {
-        "name": "nearest",
-        "in": "query",
-        "style": "form",
-        "schema": {
-          "type": "number"
+      nearest: {
+        name: "nearest",
+        in: "query",
+        style: "form",
+        schema: {
+          type: "number",
         },
-        "description": "Maximum distance in KM"
+        description: "Maximum distance in KM",
       },
-      "latitude": {
-        "name": "latitude",
-        "in": "query",
-        "style": "form",
-        "schema": {
-          "type": "number"
+      longitude: {
+        name: "longitude",
+        in: "query",
+        style: "form",
+        schema: {
+          type: "number",
         },
-        "description": "Latitude of reference for nearest distance"
+        description: "Longitude of reference for nearest distance",
       },
-      "longitude": {
-        "name": "longitude",
-        "in": "query",
-        "style": "form",
-        "schema": {
-          "type": "number"
+      latitude: {
+        name: "latitude",
+        in: "query",
+        style: "form",
+        schema: {
+          type: "number",
         },
-        "description": "Longitude of reference for nearest distance"
+        description: "Latitude of reference for nearest distance",
       },
-      "apartment_id": {
-        "name": "apartment_id",
-        "in": "path",
-        "required": true,
-        "style": "simple",
-        "schema": {
-          "type": "string",
-          "example": "apartment_id"
-        }
-      }
+      apartment_id: {
+        name: "apartment_id",
+        in: "path",
+        required: true,
+        style: "simple",
+        schema: {
+          type: "string",
+          example: "apartment_id",
+        },
+      },
     },
-    "securitySchemes": {
-      "bearer": {
-        "type": "http",
-        "scheme": "bearer"
-      }
-    }
+    securitySchemes: {
+      bearer: {
+        type: "http",
+        scheme: "bearer",
+      },
+    },
   },
-  "security": [
+  security: [
     {
-      "bearer": []
-    }
-  ]
-}
+      bearer: [],
+    },
+  ],
+};
