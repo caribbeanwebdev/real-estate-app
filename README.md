@@ -38,7 +38,7 @@ Plus, you can go to the 'homelike-service' folder and create a `.env` based on `
 
 ### 📖 Exploring the API
 
-When the application is running, you can explore and test the API on his Swagger UI.<br/>
+When the application is running, you can explore and test the API with Swagger UI.<br/>
 You can try it at http://localhost:3021/api/swagger
 
 ### 🤔 Why not GraphQL?
