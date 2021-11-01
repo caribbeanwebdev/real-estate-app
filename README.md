@@ -50,4 +50,4 @@ You can run test to make sure everything is well, just run at the root of the pr
 
 `npm run --prefix .\homelike-service\ test`
 
-Or go to 'homelike-service' folder and run 'npm run test`
+Or go to 'homelike-service' folder and run `npm run test`
