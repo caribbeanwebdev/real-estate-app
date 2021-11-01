@@ -126,3 +126,5 @@ dist
 src/build/**/*.js
 src/build/**/*.js.map
 src/build/*
+*.js
+*.map
