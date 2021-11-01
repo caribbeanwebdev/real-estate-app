@@ -69,8 +69,8 @@ const controller = {
       const user = await User.findById(req.user._id);
       const removed = await apartment.remove();
       if (user && removed) {
-        const index = user.apartments.indexOf(apartment._id);
-        user.apartments.splice(index,1);
+        const index = user.favorites.indexOf(apartment._id);
+        user.favorites.splice(index,1);
         await user.save();
       }
       return res

@@ -122,3 +122,7 @@ dist
 # Local History for Visual Studio Code
 .history/
 .vscode/launch.json
+
+src/build/**/*.js
+src/build/**/*.js.map
+src/build/*
