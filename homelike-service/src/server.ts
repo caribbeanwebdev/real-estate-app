@@ -17,7 +17,7 @@ const mongo_url = `mongodb://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/`;
       } as ConnectOptions)
       .then(() => {
         app.listen(port, () => {
-          console.log(`🚀 The application is listening on port ${port}!`);
+          console.log(`🚀 The application is listening on port http://localhost:${port}/api/`);
         });
       })
       .catch((error) => {
