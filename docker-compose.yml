@@ -9,17 +9,17 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
-    container_name: homelike-mongo
+    container_name: homelike-db
   app:
     depends_on:
       - mongodb
-    build: ./homelike-api
+    build: ./homelike-service
     restart: unless-stopped
     env_file: ./.env
     ports:
       - $NODE_DOCKER_PORT:$NODE_DOCKER_PORT
     environment:
-      - DB_HOST=homelike-mongo
+      - DB_HOST=homelike-db
       - DB_USER=root
       - DB_PASSWORD=example
       - DB_NAME=homelike

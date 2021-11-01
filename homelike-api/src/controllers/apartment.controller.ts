@@ -2,6 +2,7 @@ import { Apartment } from "../models/apartment.model";
 import { Request, Response } from "express";
 import httpStatus from "http-status";
 import { Types } from "mongoose";
+import {User} from "../models/user.model";
 
 const controller = {
   create: async (req: Request, res: Response) => {
@@ -64,7 +65,14 @@ const controller = {
           .status(httpStatus.NOT_FOUND)
           .send({ success: false, message: "Apartment not found" });
       }
-      await apartment.remove();
+      
+      const user = await User.findById(req.user._id);
+      const removed = await apartment.remove();
+      if (user && removed) {
+        const index = user.apartments.indexOf(apartment._id);
+        user.apartments.splice(index,1);
+        await user.save();
+      }
       return res
         .status(httpStatus.OK)
         .send({ success: true, message: "Apartment deleted successfully" });
