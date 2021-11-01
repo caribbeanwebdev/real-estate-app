@@ -16,7 +16,7 @@ services:
     build: ./homelike-service
     restart: unless-stopped
     ports:
-      - 30021:3021
+      - 3021:3021
     environment:
       - SERVER_PORT=3021
       - DB_HOST=homelike-db

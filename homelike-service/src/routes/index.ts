@@ -3,7 +3,7 @@ import userRouter from "./users.route";
 import apartmentRouter from "./apartments.route";
 import favoriteRouter from "./favorites.route";
 import swaggerUI from "swagger-ui-express";
-const swaggerDocument = require('../swagger.json');
+import swaggerDocument from "../swagger";
 
 const router: Router = Router();
 
