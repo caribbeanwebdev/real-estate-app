@@ -4,7 +4,9 @@
   "description": "Rest API in Node.js for technical evaluation purpose",
   "main": "src/server.ts",
   "scripts": {
-    "dev": "ts-node src/server.ts"
+    "build":"npx tsc",
+    "start": "node build/server.js",
+    "dev": "ts-node-dev --respawn --pretty --transpile-only src/server.ts"
   },
   "author": {
     "name": "Jean Carlos Calderon Vasquez",
@@ -34,7 +36,6 @@
     "mongoose": "^5.8.10",
     "passport": "^0.5.0",
     "passport-anonymous": "^1.0.1",
-    "passport-jwt": "^4.0.0",
-    "ts-node": "^10.4.0"
+    "passport-jwt": "^4.0.0"
   }
 }

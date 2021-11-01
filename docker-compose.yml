@@ -5,7 +5,7 @@ services:
     image: mongo:5.0.2
     restart: always
     ports:
-      - $MONGODB_DOCKER_PORT:$MONGODB_DOCKER_PORT
+      - 27017
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
@@ -15,15 +15,14 @@ services:
       - mongodb
     build: ./homelike-service
     restart: unless-stopped
-    env_file: ./.env
     ports:
-      - $NODE_DOCKER_PORT:$NODE_DOCKER_PORT
+      - 30021:3021
     environment:
+      - SERVER_PORT=3021
       - DB_HOST=homelike-db
       - DB_USER=root
       - DB_PASSWORD=example
-      - DB_NAME=homelike
-      - DB_PORT=$MONGODB_DOCKER_PORT
+      - DB_PORT=27017
       - JWT_SECRET=secret
     stdin_open: true
     tty: true

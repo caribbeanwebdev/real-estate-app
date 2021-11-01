@@ -130,3 +130,4 @@ src/build/*
 *.map
 *.js
 *.map
+homelike-service/.env
