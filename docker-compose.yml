@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  mongodb:
+    image: mongo:5.0.2
+    restart: always
+    ports:
+      - $MONGODB_DOCKER_PORT:$MONGODB_DOCKER_PORT
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    container_name: homelike-mongo
+  app:
+    depends_on:
+      - mongodb
+    build: ./homelike-api
+    restart: unless-stopped
+    env_file: ./.env
+    ports:
+      - $NODE_DOCKER_PORT:$NODE_DOCKER_PORT
+    environment:
+      - DB_HOST=homelike-mongo
+      - DB_USER=root
+      - DB_PASSWORD=example
+      - DB_NAME=homelike
+      - DB_PORT=$MONGODB_DOCKER_PORT
+      - JWT_SECRET=secret
+    stdin_open: true
+    tty: true
+    container_name: homelike-app
