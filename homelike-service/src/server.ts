@@ -13,6 +13,7 @@ const mongo_url = `mongodb://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/`;
         useCreateIndex: true,
         useNewUrlParser: true,
         useUnifiedTopology: true,
+        useFindAndModify:false
       } as ConnectOptions)
       .then(() => {
         app.listen(port, () => {

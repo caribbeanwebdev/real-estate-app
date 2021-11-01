@@ -24,7 +24,7 @@ const controller = {
           .status(httpStatus.NOT_FOUND)
           .send({ success: false, message: "Apartment ID is not valid" });
       }
-      const apartment = await Apartment.findOneAndUpdate(
+      const updated = await Apartment.findOneAndUpdate(
         {
           _id: req.params.id,
           createdBy: req.user._id,
@@ -35,12 +35,10 @@ const controller = {
             type: "Point",
             coordinates: req.body.location.coordinates,
           },
-        },
-        {
-          returnOriginal: false,
         }
       );
-      if (!apartment) {
+      const apartment = await Apartment.findById(updated._id);
+      if (!updated && !apartment) {
         return res
           .status(httpStatus.NOT_FOUND)
           .send({ success: false, message: "Apartment not found" });
@@ -75,7 +73,7 @@ const controller = {
       }
       return res
         .status(httpStatus.OK)
-        .send({ success: true, message: "Apartment deleted successfully" });
+        .send({ success: true });
     } catch (error) {
       return res
         .status(httpStatus.INTERNAL_SERVER_ERROR)
