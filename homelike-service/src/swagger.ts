@@ -19,7 +19,7 @@ export default {
   paths: {
     "/users/register": {
       post: {
-        summary: "register",
+        summary: "Sign Up as new user",
         description: "Register a user",
         operationId: "register",
         responses: {
@@ -89,7 +89,7 @@ export default {
     },
     "/users/authenticate": {
       post: {
-        summary: "authenticate",
+        summary: "Log in with existing account",
         description: "Login a user",
         operationId: "authenticate",
         responses: {
@@ -151,7 +151,7 @@ export default {
     },
     "/apartments": {
       post: {
-        summary: "create",
+        summary: "Create a new apartment",
         description: "Create an apartment",
         operationId: "create",
         responses: {
@@ -239,7 +239,7 @@ export default {
         tags: ["Apartment"],
       },
       get: {
-        summary: "search",
+        summary: "Search apartments",
         description: "Search apartments with filters",
         operationId: "search",
         parameters: [
@@ -293,7 +293,7 @@ export default {
     },
     "/apartments/{apartment_id}": {
       get: {
-        summary: "search/id",
+        summary: "Find an apartment by his ID",
         description: "Find apartment by ID",
         operationId: "search/id",
         parameters: [
@@ -324,7 +324,7 @@ export default {
         tags: ["Apartment"],
       },
       put: {
-        summary: "update/id",
+        summary: "Update an apartment by his ID",
         description: "Update an apartment",
         operationId: "update/id",
         parameters: [
@@ -414,7 +414,7 @@ export default {
         tags: ["Apartment"],
       },
       delete: {
-        summary: "deletech/id",
+        summary: "Delete an apartment by his ID",
         description: "Delete an apartment",
         operationId: "deletech/id",
         parameters: [
@@ -447,7 +447,8 @@ export default {
     },
     "/favorites{apartment_id}": {
       post: {
-        summary: "mark/id",
+        summary: "Mark an apartment as favorite by his ID",
+        description: "Mark an apartment as favorite",
         operationId: "mark/id",
         parameters: [
           {
@@ -479,7 +480,8 @@ export default {
     },
     "/favorites": {
       get: {
-        summary: "list",
+        summary: "List all the favorites apartments",
+        description: "Returns all the favorites apartments of the current user",
         operationId: "list",
         parameters: [],
         responses: {
