@@ -29,7 +29,7 @@ Just make sure docker is running and run at the root of the project:
 
 `docker-compose up -d`
 
-The API will run on http://localhost:3021/api
+The API will run on http://localhost:3021/api/
 
 Plus, you can go to 'homelike-service' folder and create a `.env` based on `.env.example` to run  the project locally with `npm run dev`
 
