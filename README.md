@@ -21,6 +21,8 @@ Node.js + Typescrypt + Express.js + MongoDB Real Estate REST-API as a proof of c
 ### 🎯 Prerequisites
 
 - Docker v19.03.0+
+- Node.js v14+
+- NPM v6.X+
 
 ### 🚀 Installation
 
@@ -32,7 +34,7 @@ Just make sure docker is running and run at the root of the project:
 
 The API will run on http://localhost:3021/api/
 
-Plus, you can go to 'homelike-service' folder and create a `.env` based on `.env.example` to run  the project locally with `npm run dev`
+Plus, you can go to the 'homelike-service' folder and create a `.env` based on `.env.example` to run the project locally with `npm run dev`
 
 ### 📖 Exploring the API
 
@@ -50,4 +52,4 @@ You can run test to make sure everything is well, just run at the root of the pr
 
 `npm run --prefix .\homelike-service\ test`
 
-Or go to 'homelike-service' folder and run `npm run test`
+Or go to the 'homelike-service' folder and run `npm run test`
