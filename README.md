@@ -43,7 +43,7 @@ The API will run on http://localhost:3021/api/
 So you are ready to test it with an example request of apartments 20KM nearest to the center of Madrid.
 
 Example request: 
-http://localhost:3021/api/apartments/?country=Spain&nearest=20&latitude=40.41829&longitude=-3.70358
+GET http://localhost:3021/api/apartments/?country=Spain&nearest=20&latitude=40.41829&longitude=-3.70358
 
 ### 📖 Exploring the API
 
