@@ -51,7 +51,7 @@ You can try it at http://localhost:3021/api/graphql
 
 ### 🔍 Running Tests
 
-You can run test to make sure everything is well, just run at the root of the project:
+You can run tests to make sure everything is well, just run at the root of the project:
 
 ```shell
 cd /homelike-service
