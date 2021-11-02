@@ -90,7 +90,7 @@ export default {
     "/users/authenticate": {
       post: {
         summary: "Log in with existing account",
-        description: "Login a user",
+        description: "Login a user, please copy the returned token to the bearer value in 'Authorize'",
         operationId: "authenticate",
         responses: {
           "200": {
