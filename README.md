@@ -53,7 +53,7 @@ You can try it at http://localhost:3021/api/swagger
 
 ### 🤔 Why not GraphQL?
 
-If you find that working with REST is boring, this application has a GraphQL endpoint ready to work with the apartments data.<br/>
+If you find that working with Rest is boring, this application has a GraphQL endpoint ready to work with the apartments data.<br/>
 
 You can try it at http://localhost:3021/api/graphql
 
