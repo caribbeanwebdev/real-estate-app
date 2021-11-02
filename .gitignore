@@ -126,9 +126,6 @@ dist
 src/build/**/*.js
 src/build/**/*.js.map
 src/build/*
-*.js
-*.map
-*.js
 *.map
 homelike-service/.env
 homelike-service/globalConfig.json
