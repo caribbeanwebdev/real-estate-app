@@ -74,7 +74,7 @@ query {
 
 ### 🔍 Running Tests
 
-You can run Jest tests to make sure everything is well, just run at the root of the project:
+You can run Jest tests to make sure everything it's fine, just run at the root of the project:
 
 Linux/Mac/Windows
 ```shell
