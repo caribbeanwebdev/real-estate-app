@@ -50,6 +50,10 @@ You can try it at http://localhost:3021/api/graphql
 
 You can run test to make sure everything is well, just run at the root of the project:
 
-`npm run --prefix .\homelike-service\ test`
+`npm --prefix ./homelike-service install ./homelike-service`
 
-Or go to the 'homelike-service' folder and run `npm run test`
+And then.
+
+`npm run --prefix ./homelike-service test`
+
+Or go to the 'homelike-service' folder and run `npm install` and `npm run test`
