@@ -4,7 +4,8 @@ import mongoose, { ConnectOptions } from "mongoose";
 
 const port = process.env.SERVER_PORT;
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_PORT } = process.env;
-const mongo_url = `mongodb://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/`;
+const db_credentials = DB_USER && DB_PASSWORD ? DB_USER+":"+DB_PASSWORD+"@" : "";
+const mongo_url = `mongodb://${db_credentials}${DB_HOST}:${DB_PORT}/`;
 
 (async () => {
   try {
