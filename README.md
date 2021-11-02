@@ -38,6 +38,13 @@ docker-compose up -d
 
 The API will run on http://localhost:3021/api/
 
+> The database is automatically seeded with test data
+
+So you are ready to test it with an example request of apartments 20KM nearest to the center of Madrid.
+
+Example request: 
+http://localhost:3021/api/apartments/?country=Spain&nearest=20&latitude=40.41829&longitude=-3.70358
+
 ### 📖 Exploring the API
 
 When the application is running, you can explore and test the API with Swagger UI.<br/>
@@ -49,6 +56,21 @@ You can try it at http://localhost:3021/api/swagger
 If you find that working with REST is boring, this application has a GraphQL endpoint ready to work with the apartments data.<br/>
 
 You can try it at http://localhost:3021/api/graphql
+
+Example query:
+```graphql
+query {
+  apartmentMany {
+    name
+    description
+    price
+    address
+    city
+    country
+    rooms
+  }
+}
+```
 
 ### 🔍 Running Tests
 
