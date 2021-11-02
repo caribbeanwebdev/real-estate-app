@@ -28,7 +28,8 @@ Node.js + Typescrypt + Express.js + MongoDB Real Estate REST-API as a proof of c
 
 > This application runs on a docker compose with his own mongodb database
 
-Just make sure docker is running and run this command at the root of the project:
+Just make sure docker is running(if you don't have it installed, take a look on the official documentation https://docs.docker.com/get-docker/).<br/>
+Run this command at the root of the project:
 
 ```shell
 docker-compose up -d
