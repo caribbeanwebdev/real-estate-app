@@ -74,7 +74,7 @@ query {
 
 ### 🔍 Running Tests
 
-You can run Jest tests to make sure everything it's fine, just run at the root of the project:
+You can run Jest tests to make sure everything it's working fine, just run at the root of the project:
 
 Linux/Mac/Windows
 ```shell
@@ -87,7 +87,7 @@ npm run test
 
 If you want to run it without Docker, you first need a MongoDB instance running.
 
-Create a `.env` on 'homelike-service' file based on the `env.example` with this command:<br/>
+Create a `.env` file in 'homelike-service' folder based on the `env.example` with this command:<br/>
 
 Linux/Mac
 ```shell
@@ -103,7 +103,7 @@ xcopy /I .env.example  .env*
 
 Set up the `.env` file with your MongoDB credentials and custom ports.<br/>
 
-And finally run:
+Finally run:
 
 Linux/Mac/Windows
 ```shell
