@@ -50,6 +50,17 @@ If you find that working with REST is boring, this application has a GraphQL end
 
 You can try it at http://localhost:3021/api/graphql
 
+### 🔍 Running Tests
+
+You can run tests to make sure everything is well, just run at the root of the project:
+
+Linux/Mac/Windows
+```shell
+cd ./homelike-service
+npm install
+npm run test
+```
+
 ### 👨‍💻 Developing locally
 
 If you want to run it without Docker, you first need a MongoDB instance running.
@@ -76,15 +87,4 @@ Linux/Mac/Windows
 ```shell
 npm install
 npm run dev
-```
-
-### 🔍 Running Tests
-
-You can run tests to make sure everything is well, just run at the root of the project:
-
-Linux/Mac/Windows
-```shell
-cd ./homelike-service
-npm install
-npm run test
 ```
