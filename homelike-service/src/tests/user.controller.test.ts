@@ -3,15 +3,15 @@ import * as dbHandler from '../config/testDB';
 
 beforeAll(async () => {
     await dbHandler.connect()
-});
+},30000);
 
 afterEach(async () => {
     await dbHandler.clearDatabase()
-});
+},30000);
 
 afterAll(async () => {
     await dbHandler.closeDatabase()
-});
+},30000);
 
 describe('User test', () => {
     it('can be created correctly', async () => {
