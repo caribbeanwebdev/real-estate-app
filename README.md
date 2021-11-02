@@ -42,11 +42,13 @@ Plus, you can go to the 'homelike-service' folder and create a `.env` based on `
 ### 📖 Exploring the API
 
 When the application is running, you can explore and test the API with Swagger UI.<br/>
+
 You can try it at http://localhost:3021/api/swagger
 
 ### 🤔 Why not GraphQL?
 
 If you find that working with REST is boring, this application has a GraphQL endpoint ready to work with the apartments data.<br/>
+
 You can try it at http://localhost:3021/api/graphql
 
 ### 🔍 Running Tests
