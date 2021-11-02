@@ -30,7 +30,9 @@ Node.js + Typescrypt + Express.js + MongoDB Real Estate REST-API as a proof of c
 
 Just make sure docker is running and run this command at the root of the project:
 
-`docker-compose up -d`
+```shell
+docker-compose up -d
+```
 
 The API will run on http://localhost:3021/api/
 
@@ -50,6 +52,8 @@ You can try it at http://localhost:3021/api/graphql
 
 You can run test to make sure everything is well, just run at the root of the project:
 
-`npm run --prefix .\homelike-service\ test`
-
-Or go to the 'homelike-service' folder and run `npm run test`
+```shell
+cd /homelike-service
+npm install
+npm run test
+```
