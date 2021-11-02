@@ -9,7 +9,7 @@
 
 # 😎 Read me
 
-Node.js + Typescrypt + Express.js + MongoDB Real Estate REST-API as a proof of concept.
+Real Estate Rest API in Node.js + Typescrypt + Express.js + MongoDB as a proof of concept.
 
 ### 🌟 Extra features
 
@@ -26,18 +26,17 @@ Node.js + Typescrypt + Express.js + MongoDB Real Estate REST-API as a proof of c
 
 ### 🚀 Installation
 
-> This application runs on a docker compose with his own mongodb database
+> This application runs on a docker compose with his own MongoDB database
 
 Just make sure docker is running (if you don't have it installed, take a look on the official documentation https://docs.docker.com/get-docker/).<br/>
 Run this command at the root of the project:
 
+Linux/Mac/Windows
 ```shell
 docker-compose up -d
 ```
 
 The API will run on http://localhost:3021/api/
-
-Plus, you can go to the 'homelike-service' folder and create a `.env` based on `.env.example` to run the project locally with `npm run dev`
 
 ### 📖 Exploring the API
 
@@ -51,10 +50,39 @@ If you find that working with REST is boring, this application has a GraphQL end
 
 You can try it at http://localhost:3021/api/graphql
 
+### 👨‍💻 Developing locally
+
+If you want to run it without Docker, you first need a MongoDB instance running.
+
+Create a `.env` on 'homelike-service' file based on the `env.example` with this command:<br/>
+
+Linux/Mac
+```shell
+cd homelike-service
+cp .env.example  .env
+```
+
+Windows
+```shell
+cd homelike-service
+xcopy /I .env.example  .env*
+```
+
+Set up the `.env` file with your MongoDB credentials and custom ports.<br/>
+
+And finally run:
+
+Linux/Mac/Windows
+```shell
+npm install
+npm run dev
+```
+
 ### 🔍 Running Tests
 
 You can run tests to make sure everything is well, just run at the root of the project:
 
+Linux/Mac/Windows
 ```shell
 cd ./homelike-service
 npm install
