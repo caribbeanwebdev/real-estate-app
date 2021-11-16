@@ -78,7 +78,7 @@ You can run Jest tests to make sure everything it's working fine, just run at th
 
 Linux/Mac/Windows
 ```shell
-cd ./homelike-service
+cd ./real-estate-service
 npm install
 npm run test
 ```
@@ -87,17 +87,17 @@ npm run test
 
 If you want to run it without Docker, you first need a MongoDB instance running.
 
-Create a `.env` file in 'homelike-service' folder based on the `env.example` with this command:<br/>
+Create a `.env` file in 'real-estate-service' folder based on the `env.example` with this command:<br/>
 
 Linux/Mac
 ```shell
-cd homelike-service
+cd real-estate-service
 cp .env.example  .env
 ```
 
 Windows
 ```shell
-cd homelike-service
+cd real-estate-service
 xcopy /I .env.example  .env*
 ```
 

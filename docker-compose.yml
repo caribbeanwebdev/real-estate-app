@@ -9,21 +9,21 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
-    container_name: homelike-db
+    container_name: real-estate-db
   app:
     depends_on:
       - mongodb
-    build: ./homelike-service
+    build: ./real-estate-service
     restart: unless-stopped
     ports:
       - 3021:3021
     environment:
       - SERVER_PORT=3021
-      - DB_HOST=homelike-db
+      - DB_HOST=real-estate-db
       - DB_USER=root
       - DB_PASSWORD=example
       - DB_PORT=27017
       - JWT_SECRET=secret
     stdin_open: true
     tty: true
-    container_name: homelike-app
+    container_name: real-estate-app

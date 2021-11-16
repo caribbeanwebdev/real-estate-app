@@ -12,7 +12,7 @@ export default {
   ],
   info: {
     version: "v1.0",
-    title: "homelike-app",
+    title: "real-estate-app",
     description:
       "Node.js + Typescrypt + MongoDB Real Estate API as a proof of concept.",
   },

@@ -127,7 +127,7 @@ src/build/**/*.js
 src/build/**/*.js.map
 src/build/*
 *.map
-homelike-service/.env
-homelike-service/globalConfig.json
-homelike-service/babel.config.ts
-homelike-service/package-lock.json
+real-estate-service/.env
+real-estate-service/globalConfig.json
+real-estate-service/babel.config.ts
+real-estate-service/package-lock.json

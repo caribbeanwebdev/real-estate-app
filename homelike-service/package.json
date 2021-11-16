@@ -1,5 +1,5 @@
 {
-  "name": "homelike-app",
+  "name": "real-estate-app",
   "version": "1.0.0",
   "description": "Rest API in Node.js for technical evaluation purpose",
   "main": "src/server.ts",
